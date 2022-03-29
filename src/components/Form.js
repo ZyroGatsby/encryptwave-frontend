@@ -13,8 +13,6 @@ function Form() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
-    // eslint-disable-next-line no-console
-    console.log(formValues);
   };
 
   // Function to habdle submit (validate form values & set isSubmit to true)
