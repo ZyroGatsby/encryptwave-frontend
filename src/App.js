@@ -55,8 +55,8 @@ function App() {
       </header>
       <Form />
       <footer className="text-sm absolute right-0 bottom-0 p-4 lg:p-14">
-        <p className="font-medium mb-1">Powered by</p>
-        <p>SearchSmartly Inc</p>
+        <p className="font-medium mb-1">Powered by SearchSmartly, Inc.</p>
+        <a href="https://github.com/ZyroGatsby/search-smartly">Github Repository</a>
       </footer>
     </main>
   );
