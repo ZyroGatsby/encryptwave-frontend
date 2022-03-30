@@ -1,23 +1,34 @@
+import axios from 'axios';
+
 // Function to encrypt password using permutation cipher
 export const encode = ({ password, key }) => {
-  const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  const permutedKey = key.toUpperCase();
-  const normalPassword = password.toUpperCase();
-  const current = new Date();
+  axios.post(`http://localhost:8000/encode`, { password, key }).then((res) => {
+    const encodedPassword = res.data;
+    const current = new Date();
+    const time = current.toLocaleString();
+    // eslint-disable-next-line no-console
+    return { encodedPassword: encodedPassword, time: time };
+    // return { encodedPassword: res.data, time: time };
+  });
 
-  let encodedPassword = '';
-  let i = 0;
+  // const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  // const permutedKey = key.toUpperCase();
+  // const normalPassword = password.toUpperCase();
+  // const current = new Date();
 
-  while (i < password.length) {
-    // eslint-disable-next-line no-undef
-    const index = alphabet.indexOf(normalPassword.charAt(i));
-    encodedPassword = encodedPassword + permutedKey.charAt(index);
-    i++;
-  }
+  // let encodedPassword = '';
+  // let i = 0;
 
-  const time = current.toLocaleString();
+  // while (i < password.length) {
+  //   // eslint-disable-next-line no-undef
+  //   const index = alphabet.indexOf(normalPassword.charAt(i));
+  //   encodedPassword = encodedPassword + permutedKey.charAt(index);
+  //   i++;
+  // }
 
-  return { encodedPassword: encodedPassword, time: time };
+  // const time = current.toLocaleString();
+
+  // return { encodedPassword: encodedPassword, time: time };
 };
 
 // Function to validate form values

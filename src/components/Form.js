@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import React, { useState, useEffect } from 'react';
-import { encode, validate } from '../utils/helpers';
+import axios from 'axios';
+import { validate } from '../utils/helpers';
 
 function Form() {
   const initialValues = { password: '', key: '' };
@@ -33,10 +34,16 @@ function Form() {
     // eslint-disable-next-line no-console
     console.log(formErrors);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      // Encode the form values to get ciphered password
-      const encoded = encode(formValues);
-      setEncoded(encoded);
-      localStorage.setItem('encoded', JSON.stringify(encoded));
+      // Encode the form values to get ciphered password from backend
+      axios.post(`https://q6ihcl.deta.dev/encode`, formValues).then((res) => {
+        const encodedPassword = res.data;
+        const current = new Date();
+        const time = current.toLocaleString();
+
+        const encoded = { encodedPassword: encodedPassword, time: time };
+        setEncoded(encoded);
+        localStorage.setItem('encoded', JSON.stringify(encoded));
+      });
     }
   }, [formErrors]);
 
