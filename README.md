@@ -8,7 +8,7 @@ Permutation cipher is a method of constructing ciphers that uses the plaintext m
 
 - Per the task's requirements, the frontend SPA was built using React. The SPA encrypts the password received from the form with a key.
 - The encryption process happens on the [backend](https://github.com/ZyroGatsby/premutation-cipher-python) and the state persists on page reloads.
-- The deployed version of the SPA can be located [here](https://search-smartly-vercel.app/).
+- The deployed version of the SPA can be located [here](https://search-smartly.vercel.app/).
 
 #### [Backend - Repo](https://github.com/ZyroGatsby/premutation-cipher-python)
 
