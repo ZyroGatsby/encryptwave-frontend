@@ -13,4 +13,4 @@ Permutation cipher is a method of constructing ciphers that uses the plaintext m
 #### [Backend - Repo](https://github.com/ZyroGatsby/premutation-cipher-python)
 
 - This was built using FastApi, A python framework. I used this for its ease of deployment using [deta](https://www.deta.sh/), and to show my versatility with multiple languages.
-- The deployed version is hosted here [Backend - Site](https://q6ihcl.deta.dev/)
+- The deployed version is hosted here [Backend - Site](https://search-smartly.deta.dev/)
