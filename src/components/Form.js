@@ -31,8 +31,6 @@ function Form() {
   }, [setEncoded]);
 
   useEffect(() => {
-    // eslint-disable-next-line no-console
-    console.log(formErrors);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       // Encode the form values to get ciphered password from backend
       axios.post(`https://q6ihcl.deta.dev/encode`, formValues).then((res) => {
