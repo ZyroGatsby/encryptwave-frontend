@@ -33,7 +33,7 @@ function Form() {
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       // Encode the form values to get ciphered password from backend
-      axios.post(`https://search-smartly.deta.dev/encode`, formValues).then((res) => {
+      axios.post(`https://encryptwave-api.deta.dev/substitution/encode`, formValues).then((res) => {
         const encodedPassword = res.data;
         const current = new Date();
         const time = current.toLocaleString();

@@ -7,7 +7,7 @@ function App() {
       <header className="w-full absolute left-0 top-0 p-4 lg:p-14">
         <div className="flex justify-between">
           <div>
-            <h1 className="text-xl font-bold">[ SearchSmartly ]</h1>
+            <h1 className="text-xl font-bold">[ Encryptwave ]</h1>
             <span className="text-sm">Be security conscious</span>
           </div>
           <div>
@@ -55,8 +55,8 @@ function App() {
       </header>
       <Form />
       <footer className="text-sm absolute right-0 bottom-0 p-4 lg:p-14">
-        <p className="font-medium mb-1">Powered by SearchSmartly, Inc.</p>
-        <a href="https://github.com/ZyroGatsby/search-smartly">Github Repository</a>
+        <p className="font-medium mb-1">Powered by Encryptwave, demo.</p>
+        <a href="https://github.com/ZyroGatsby/encryptwave-frontend">Github Repository</a>
       </footer>
     </main>
   );
